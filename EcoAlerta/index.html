@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAlerta</title>
+
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS (para el mapa) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Nuestros estilos -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sensor.css">
+</head>
+<body>
+
+<!-- ===== ENCABEZADO ===== -->
+<header>
+    <img src="file.jpg" alt="EcoAlerta" class="logo-header">
+</header>
+
+<!-- ===== CONTENIDO PRINCIPAL ===== -->
+<main id="contenido">
+    <section id="inicio">
+        <h2>Bienvenidos</h2>
+        <p>Monitoreamos el río Tunjuelito en tiempo real y cada reporte ciudadano suma para protegerlo.</p>
+    </section>
+</main>
+
+<!-- ===== MENÚ DE NAVEGACIÓN ===== -->
+<nav>
+    <button data-seccion="inicio" class="activo" onclick="mostrarSeccion('inicio')">
+        <span class="nav-icono">🏠</span>
+        <span class="nav-texto">Inicio</span>
+    </button>
+    <button data-seccion="reportar" onclick="mostrarSeccion('reportar')">
+        <span class="nav-icono">📋</span>
+        <span class="nav-texto">Reportar</span>
+    </button>
+    <button data-seccion="alertas" onclick="mostrarSeccion('alertas')">
+        <span class="nav-icono">🚨</span>
+        <span class="nav-texto">Alertas</span>
+    </button>
+    <button data-seccion="jugar" onclick="mostrarSeccion('jugar')">
+        <span class="nav-icono">🎮</span>
+        <span class="nav-texto">Jugar</span>
+    </button>
+    <button data-seccion="perfil" onclick="mostrarSeccion('perfil')">
+        <span class="nav-icono">👤</span>
+        <span class="nav-texto">Perfil</span>
+    </button>
+</nav>
+
+<!-- ===== PIE DE PÁGINA ===== -->
+<footer>
+    Angie Rodríguez
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/navegacion.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
